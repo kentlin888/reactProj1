@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Modal, Nav, Navbar, NavDropdown, Container } from 'react-bootstrap'
+import { Button, Modal, Nav, Navbar, NavDropdown, Container, Dropdown, DropdownButton } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fas, faUser } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -54,14 +54,27 @@ export default class NavBarHeader extends Component {
                         </Nav>
                         <Nav>
                             {/* <Nav.Link href="#deets"><FontAwesomeIcon icon="check-square" />技術審查</Nav.Link> */}
-                            <Nav.Link href="#deets"><FontAwesomeIcon icon={faUser} size="1x"/></Nav.Link>
-                            <NavDropdown title="麗臺 科員你好">
+                            {/* <Nav.Link href="#deets"><FontAwesomeIcon icon={faUser} size="1x" /></Nav.Link> */}
+                            {/* <NavDropdown title="麗臺 科員你好">
                                 <NavDropdown.Item href="#action/3.1">系統設定</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">登出</NavDropdown.Item>
-                            </NavDropdown>
+                            </NavDropdown> */}
+                            <Nav.Link>
+                                <Dropdown>
+                                    <Dropdown.Toggle variant="success" id="dropdown-basic" variant="primary">
+                                        <FontAwesomeIcon icon={faUser} size="1x" />
+                                        麗臺 科員你好
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu >
+                                        <Dropdown.Item as="button">系統設定</Dropdown.Item>
+                                        <Dropdown.Item as="button">登出</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </Nav.Link>
 
+                            
 
-                            {/* <NavDropdown title="麗臺 科員你好">
+                            {/* <NavDropdown title="麗臺 科員你好" variant="dark">
                                 <NavDropdown.Item href="#action/3.1">系統設定</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">登出</NavDropdown.Item>
                             </NavDropdown>

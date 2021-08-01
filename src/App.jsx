@@ -6,6 +6,7 @@ import { forwardRef } from 'react';
 import MaterialTable from 'material-table'
 import NavBarHeader from './NavBarHeader.jsx'
 import Table1 from './Table1.jsx'
+import Modal1 from './Modal1.jsx'
 
 
 export default class App extends Component {
@@ -13,7 +14,8 @@ export default class App extends Component {
         return (
             <React.Fragment>
                 <NavBarHeader></NavBarHeader>
-                <Table1></Table1>
+                <Modal1></Modal1>
+                {/* <Table1></Table1> */}
             </React.Fragment>
         )
     }
